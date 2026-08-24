@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO ============ -->
+  <title>Tapicería Axel | Tapizado de Sillones, Respaldos y Pufs</title>
+  <meta name="description" content="Tapicería Axel. Renovación y tapizado de sillones, respaldos, pufs y muebles. Consultá por WhatsApp y pedí tu presupuesto." />
+  <meta name="theme-color" content="#080808" />
+  <link rel="canonical" href="https://www.tapiceriaaxel.com.ar/" />
+
+  <!-- ============ Open Graph ============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tapicería Axel | Tapizado de Sillones, Respaldos y Pufs" />
+  <meta property="og:description" content="Renovación y tapizado de sillones, respaldos y pufs a medida. Mandanos una foto de tu mueble por WhatsApp y pedí tu presupuesto." />
+  <meta property="og:locale" content="es_AR" />
+  <!-- REEMPLAZAR og:image por una foto real (1200x630). Cambiá también og:url por el dominio final. -->
+  <meta property="og:image" content="assets/images/og.jpg" />
+  <meta property="og:url" content="https://www.tapiceriaaxel.com.ar/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ============ Fuentes ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ============ Schema.org LocalBusiness ============
+       Tipo HomeAndConstructionBusiness (tapicería/restauración de muebles).
+       No se incluye address ni openingHours porque el cliente no los aportó.
+       Cuando tengas dirección/horarios, agregalos aquí. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Tapicería Axel",
+    "description": "Tapizado y restauración de sillones, respaldos, pufs y muebles a medida.",
+    "url": "https://www.tapiceriaaxel.com.ar/",
+    "image": "https://www.tapiceriaaxel.com.ar/assets/images/og.jpg",
+    "telephone": "+5491178241899",
+    "priceRange": "$$",
+    "areaServed": "Argentina",
+    "knowsLanguage": "es-AR",
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tapizado de sillones" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tapizado y restauración de respaldos" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tapizado de pufs" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retapizado y renovación de muebles" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trabajos de tapicería personalizados" } }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+5491178241899",
+      "availableLanguage": "Spanish"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="inicio">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="Tapicería Axel - Inicio">
+        <img src="assets/images/logo.jpg" alt="Logo de Tapicería Axel" class="brand-logo" width="46" height="46" />
+        <span class="brand-text">
+          <span class="brand-line">Tapicería</span>
+          <span class="brand-axel">Axel</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#configurador" class="nav-link">Colores</a>
+        <a href="#trabajos" class="nav-link">Trabajos</a>
+        <a href="#preguntas" class="nav-link">Preguntas</a>
+        <a href="#" class="btn btn-gold btn-sm js-wa nav-cta">Pedir presupuesto</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <img src="assets/images/hero.jpg" alt="Sillón capitoné tapizado en el taller de Tapicería Axel" fetchpriority="high" width="1672" height="941" />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content reveal">
+        <span class="eyebrow">Taller de tapicería &amp; restauración</span>
+        <h1 id="hero-title" class="hero-title">Dale una nueva vida a tus muebles.</h1>
+        <p class="hero-sub">
+          Tapizados y restauraciones realizados a medida, con atención personalizada
+          y terminaciones que hacen la diferencia.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#" class="btn btn-gold js-wa">
+            <svg class="ico-wa" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.4.7 4.7 1.9 6.7L3 29l6.8-2.1c1.9 1 4 1.6 6.2 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.9 1.2 1.2-3.8-.3-.4a10 10 0 0 1-1.6-5.4c0-5.6 4.6-10.2 10.2-10.2S26 10.1 26 15.7 21.6 25.8 16 25.8z"/><path d="M21.6 18.3c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.3-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5c0-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5 0-.8.4a3.4 3.4 0 0 0-1 2.5c0 1.5 1 2.9 1.2 3.1s2.2 3.4 5.3 4.7c2.6 1.1 3.1.9 3.7.8s1.8-.7 2-1.4.4-1.3.3-1.4z"/></svg>
+            Pedir presupuesto por WhatsApp
+          </a>
+          <a href="#trabajos" class="btn btn-ghost">Ver nuestros trabajos</a>
+        </div>
+
+        <p class="hero-note">Mandanos una foto de tu mueble y te asesoramos sin compromiso.</p>
+      </div>
+
+      <a href="#servicios" class="scroll-cue" aria-hidden="true"><span></span></a>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section services" id="servicios" aria-labelledby="serv-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Servicios</span>
+          <h2 id="serv-title">¿Qué podemos renovar?</h2>
+          <p class="section-sub">
+            Trabajamos cada pieza de manera personalizada, adaptándonos al estilo
+            y necesidades de cada cliente.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <span class="card-ico" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24v-4a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v4"/><path d="M8 24a3 3 0 0 0-3 3v6a2 2 0 0 0 2 2h34a2 2 0 0 0 2-2v-6a3 3 0 0 0-3-3 3 3 0 0 0-3 3v3H11v-3a3 3 0 0 0-3-3Z"/><path d="M10 35v4M38 35v4"/></svg>
+            </span>
+            <h3>Sillones</h3>
+            <p>Renovamos sillones individuales y juegos completos, reemplazando telas y devolviéndoles presencia y comodidad.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-ico" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="8" width="30" height="24" rx="4"/><path d="M16 8v24M24 8v24M32 8v24M9 20h30"/><path d="M13 32v6M35 32v6"/></svg>
+            </span>
+            <h3>Respaldos</h3>
+            <p>Tapizados y respaldos personalizados para transformar completamente el dormitorio.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-ico" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="20" rx="15" ry="8"/><path d="M9 20v6c0 4.4 6.7 8 15 8s15-3.6 15-8v-6"/><path d="M14 24l4 6M34 24l-4 6M24 28v6"/></svg>
+            </span>
+            <h3>Pufs</h3>
+            <p>Renovación y tapizado de pufs en diferentes telas, colores y terminaciones.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-ico" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l3.6 7.3 8 1.2-5.8 5.6 1.4 8-7.2-3.8-7.2 3.8 1.4-8-5.8-5.6 8-1.2Z"/><path d="M24 30v12M18 42h12"/></svg>
+            </span>
+            <h3>Trabajos especiales</h3>
+            <p>¿Tenés otro mueble que querés recuperar? Mandanos una foto y consultanos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONFIGURADOR DE COLOR ============ -->
+    <section class="section configurator" id="configurador" aria-labelledby="cfg-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Imaginá tu sillón</span>
+          <h2 id="cfg-title">Probá los colores</h2>
+          <p class="section-sub">
+            Elegí una tela y mirá cómo queda. Es solo una guía visual: trabajamos con muchísimas
+            telas y colores más. Cuando tengas tu favorito, consultanos.
+          </p>
+        </div>
+
+        <div class="cfg-stage reveal">
+          <!-- ESCENA: pared + sillón. El color se controla con la variable --sofa
+               sobre #cfgSofa: se mezcla el color con la foto (background-blend-mode:
+               multiply) y se recorta a la silueta del PNG, conservando pliegues y sombras. -->
+          <div class="cfg-scene" id="cfgScene" data-wall="light">
+            <div class="cfg-sofa" id="cfgSofa" style="--sofa:#2C57A6;" role="img" aria-label="Sillón de tres cuerpos de muestra para elegir el color de la tela"></div>
+          </div>
+
+          <!-- CONTROLES -->
+          <div class="cfg-controls">
+            <div class="cfg-row">
+              <span class="cfg-label">Fondo de pared</span>
+              <div class="cfg-walls" role="group" aria-label="Elegir fondo de pared">
+                <button class="cfg-wall is-active" data-wall="light" aria-pressed="true">Blanca</button>
+                <button class="cfg-wall" data-wall="dark" aria-pressed="false">Negra</button>
+              </div>
+            </div>
+
+            <div class="cfg-row">
+              <span class="cfg-label">Color de tela — <strong id="cfgColorName" class="cfg-color-name">Azul Francia</strong></span>
+              <div class="cfg-swatches" id="cfgSwatches" role="group" aria-label="Elegir color de tela">
+                <button class="cfg-swatch is-active" style="--c:#2C57A6" data-color="#2C57A6" data-name="Azul Francia" aria-label="Azul Francia"></button>
+                <button class="cfg-swatch" style="--c:#1F2A48" data-color="#1F2A48" data-name="Azul marino" aria-label="Azul marino"></button>
+                <button class="cfg-swatch" style="--c:#5E2130" data-color="#5E2130" data-name="Bordó" aria-label="Bordó"></button>
+                <button class="cfg-swatch" style="--c:#24402C" data-color="#24402C" data-name="Verde oscuro" aria-label="Verde oscuro"></button>
+                <button class="cfg-swatch" style="--c:#1C4A4A" data-color="#1C4A4A" data-name="Verde petróleo" aria-label="Verde petróleo"></button>
+                <button class="cfg-swatch" style="--c:#3B4046" data-color="#3B4046" data-name="Gris plomo" aria-label="Gris plomo"></button>
+                <button class="cfg-swatch" style="--c:#3A2A1D" data-color="#3A2A1D" data-name="Chocolate" aria-label="Chocolate"></button>
+                <button class="cfg-swatch" style="--c:#8A5A2B" data-color="#8A5A2B" data-name="Camel" aria-label="Camel"></button>
+                <button class="cfg-swatch" style="--c:#17181B" data-color="#17181B" data-name="Negro" aria-label="Negro"></button>
+                <button class="cfg-swatch cfg-swatch-light" style="--c:#F1EEE7" data-color="#F1EEE7" data-name="Blanco" aria-label="Blanco"></button>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-gold cfg-cta" id="cfgCta">
+              <svg class="ico-wa" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.4.7 4.7 1.9 6.7L3 29l6.8-2.1c1.9 1 4 1.6 6.2 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.9 1.2 1.2-3.8-.3-.4a10 10 0 0 1-1.6-5.4c0-5.6 4.6-10.2 10.2-10.2S26 10.1 26 15.7 21.6 25.8 16 25.8z"/><path d="M21.6 18.3c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.3-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5c0-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5 0-.8.4a3.4 3.4 0 0 0-1 2.5c0 1.5 1 2.9 1.2 3.1s2.2 3.4 5.3 4.7c2.6 1.1 3.1.9 3.7.8s1.8-.7 2-1.4.4-1.3.3-1.4z"/></svg>
+              Me gusta este color, consultar
+            </a>
+            <p class="cfg-note">Los colores en pantalla son orientativos y pueden variar según la tela real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERÍA DE TRABAJOS ============ -->
+    <section class="section gallery-section" id="trabajos" aria-labelledby="gal-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Portfolio</span>
+          <h2 id="gal-title">Trabajos que hablan por nosotros</h2>
+          <p class="section-sub">
+            Algunos muebles que pasaron por nuestro taller y volvieron completamente renovados.
+          </p>
+        </div>
+
+        <!-- ============================================================
+             GALERÍA — FOTOS REALES DE TAPICERÍA AXEL (respaldos).
+             Archivos en: assets/images/trabajo-01.jpg ... trabajo-07.jpg
+             Para sumar sillones/pufs: agregá un <figure> igual a estos con
+             tu nueva foto. El grid tipo masonry se adapta solo.
+             ============================================================ -->
+        <div class="gallery" id="gallery">
+          <figure class="gallery-item reveal">
+            <img src="assets/images/trabajo-01.jpg" alt="Respaldo de cama con forma de pétalos tapizado en pana azul noche" loading="lazy" width="1200" height="1600" />
+            <span class="gallery-zoom" aria-hidden="true"></span>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/images/trabajo-02.jpg" alt="Respaldo canaleteado tapizado en pana rosa palo" loading="lazy" width="1125" height="1500" />
+            <span class="gallery-zoom" aria-hidden="true"></span>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/images/trabajo-03.jpg" alt="Respaldo con forma de pétalos tapizado en ecocuero azul" loading="lazy" width="720" height="720" />
+            <span class="gallery-zoom" aria-hidden="true"></span>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/images/trabajo-04.jpg" alt="Respaldo canaleteado tapizado en lino beige" loading="lazy" width="960" height="1280" />
+            <span class="gallery-zoom" aria-hidden="true"></span>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/images/trabajo-05.jpg" alt="Respaldo con forma de pétalos tapizado en pana verde" loading="lazy" width="1125" height="1500" />
+            <span class="gallery-zoom" aria-hidden="true"></span>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/images/trabajo-06.jpg" alt="Respaldo con forma de pétalos tapizado en pana azul noche" loading="lazy" width="720" height="720" />
+            <span class="gallery-zoom" aria-hidden="true"></span>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/images/trabajo-07.jpg" alt="Respaldo con forma de pétalos tapizado en pana gris verdoso" loading="lazy" width="1200" height="1600" />
+            <span class="gallery-zoom" aria-hidden="true"></span>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA INTERMEDIO ============ -->
+    <section class="cta-mid" aria-labelledby="ctamid-title">
+      <div class="cta-mid-texture" aria-hidden="true"></div>
+      <div class="container cta-mid-inner reveal">
+        <h2 id="ctamid-title">¿Tenés un sillón que necesita una segunda oportunidad?</h2>
+        <p>Mandanos una foto por WhatsApp y contanos qué querés hacer. Te asesoramos sobre las opciones disponibles.</p>
+        <a href="#" class="btn btn-gold btn-lg js-wa">
+          <svg class="ico-wa" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.4.7 4.7 1.9 6.7L3 29l6.8-2.1c1.9 1 4 1.6 6.2 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.9 1.2 1.2-3.8-.3-.4a10 10 0 0 1-1.6-5.4c0-5.6 4.6-10.2 10.2-10.2S26 10.1 26 15.7 21.6 25.8 16 25.8z"/><path d="M21.6 18.3c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.3-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5c0-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5 0-.8.4a3.4 3.4 0 0 0-1 2.5c0 1.5 1 2.9 1.2 3.1s2.2 3.4 5.3 4.7c2.6 1.1 3.1.9 3.7.8s1.8-.7 2-1.4.4-1.3.3-1.4z"/></svg>
+          Enviar foto y consultar
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS FRECUENTES ============ -->
+    <section class="section faq-section" id="preguntas" aria-labelledby="faq-title">
+      <div class="container container-narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow">Dudas</span>
+          <h2 id="faq-title">Preguntas frecuentes</h2>
+        </div>
+
+        <div class="faq" id="faq">
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>¿Cómo puedo pedir un presupuesto?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>Podés enviarnos por WhatsApp una o varias fotos del mueble junto con una breve descripción de lo que querés realizar. Con esa información podemos orientarte y coordinar los siguientes pasos.</p></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>¿Puedo elegir la tela y el color?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>Sí. El trabajo se realiza de manera personalizada y podemos asesorarte sobre diferentes opciones de telas, colores y terminaciones.</p></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>¿Trabajan solamente con sillones?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>No. También realizamos respaldos, pufs y diferentes trabajos de tapicería. Si tenés otro tipo de mueble, envianos una foto y consultanos.</p></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>¿Restauran muebles antiguos?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>Dependiendo del estado y del tipo de mueble podemos evaluar diferentes alternativas para renovarlo. Lo ideal es enviarnos fotografías por WhatsApp.</p></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>¿Cuánto demora un trabajo?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>El tiempo depende del tipo de mueble, el trabajo necesario y los materiales elegidos. Una vez evaluado el trabajo podemos indicarte un plazo estimado.</p></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>¿Dónde puedo consultar?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>La manera más rápida es enviándonos un mensaje directamente por WhatsApp.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="cta-final" aria-labelledby="ctaf-title">
+      <div class="container cta-final-inner reveal">
+        <span class="rule-gold" aria-hidden="true"></span>
+        <h2 id="ctaf-title">Tu mueble puede volver a ser protagonista.</h2>
+        <p>Contanos qué querés renovar y recibí asesoramiento personalizado.</p>
+        <a href="#" class="btn btn-gold btn-lg js-wa">
+          <svg class="ico-wa" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.4.7 4.7 1.9 6.7L3 29l6.8-2.1c1.9 1 4 1.6 6.2 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.9 1.2 1.2-3.8-.3-.4a10 10 0 0 1-1.6-5.4c0-5.6 4.6-10.2 10.2-10.2S26 10.1 26 15.7 21.6 25.8 16 25.8z"/><path d="M21.6 18.3c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.3-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5c0-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5 0-.8.4a3.4 3.4 0 0 0-1 2.5c0 1.5 1 2.9 1.2 3.1s2.2 3.4 5.3 4.7c2.6 1.1 3.1.9 3.7.8s1.8-.7 2-1.4.4-1.3.3-1.4z"/></svg>
+          Consultar por WhatsApp
+        </a>
+        <a class="cta-final-phone js-wa" href="#">WhatsApp: <strong>11 7824-1899</strong></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-line">Tapicería</span> <span class="brand-axel">Axel</span>
+      </div>
+      <p class="footer-services">Sillones · Respaldos · Pufs · Trabajos personalizados</p>
+      <p class="footer-wa">WhatsApp: <a href="#" class="js-wa">11 7824-1899</a></p>
+      <p class="footer-copy">© 2026 Tapicería Axel. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ============ BOTÓN FLOTANTE WHATSAPP ============ -->
+  <a href="#" class="wa-float js-wa" aria-label="Consultar por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.4.7 4.7 1.9 6.7L3 29l6.8-2.1c1.9 1 4 1.6 6.2 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.9 1.2 1.2-3.8-.3-.4a10 10 0 0 1-1.6-5.4c0-5.6 4.6-10.2 10.2-10.2S26 10.1 26 15.7 21.6 25.8 16 25.8z"/><path d="M21.6 18.3c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.3-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5c0-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5 0-.8.4a3.4 3.4 0 0 0-1 2.5c0 1.5 1 2.9 1.2 3.1s2.2 3.4 5.3 4.7c2.6 1.1 3.1.9 3.7.8s1.8-.7 2-1.4.4-1.3.3-1.4z"/></svg>
+    <span class="wa-float-label">Consultar por WhatsApp</span>
+  </a>
+
+  <!-- ============ LIGHTBOX GALERÍA ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Vista ampliada del trabajo">
+    <button class="lightbox-close" id="lbClose" aria-label="Cerrar">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Anterior">&#8249;</button>
+    <img class="lightbox-img" id="lbImg" src="" alt="" />
+    <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Siguiente">&#8250;</button>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
