@@ -171,6 +171,46 @@
   });
 
   /* ---------------------------------------------------------
+     GALERÍA — VER MÁS / VER MENOS
+     Al inicio se muestran solo las 3 primeras fotos y aparece
+     el botón. Sin JS, se ven todas (progressive enhancement).
+     Para cambiar cuántas se ven de entrada, editá VISIBLES.
+     --------------------------------------------------------- */
+  var VISIBLES = 3;
+  var gallery = document.getElementById("gallery");
+  var galleryMore = document.getElementById("galleryMore");
+  if (gallery && galleryMore) {
+    var galleryItems = gallery.querySelectorAll(".gallery-item");
+    var ocultas = galleryItems.length - VISIBLES;
+
+    if (ocultas > 0) {
+      gallery.classList.add("is-collapsed");
+      galleryMore.hidden = false;
+
+      var setLabel = function (collapsed) {
+        galleryMore.firstChild.nodeValue = collapsed
+          ? "Ver más trabajos (" + ocultas + ") "
+          : "Ver menos ";
+      };
+      setLabel(true);
+
+      galleryMore.addEventListener("click", function () {
+        var collapsed = gallery.classList.toggle("is-collapsed");
+        galleryMore.setAttribute("aria-expanded", String(!collapsed));
+        setLabel(collapsed);
+
+        if (collapsed) {
+          // Al plegar, volvemos al comienzo de la galería
+          document.getElementById("trabajos").scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          // Aseguramos que las fotos recién mostradas aparezcan (animación reveal)
+          galleryItems.forEach(function (it) { it.classList.add("in"); });
+        }
+      });
+    }
+  }
+
+  /* ---------------------------------------------------------
      CONFIGURADOR DE COLOR
      - Cambia el color de la tapicería del sillón (variable --sofa)
      - Cambia el fondo de pared (blanca / negra)

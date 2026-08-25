@@ -19,6 +19,7 @@
 
   --font-serif:   'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-sans:    'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Archivo', 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   --container:    1180px;
   --radius:       14px;
@@ -184,7 +185,11 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.12
 .hero .container { max-width: none; padding-left: clamp(20px, 3.2vw, 52px); padding-right: clamp(20px, 3.2vw, 52px); }
 .hero-content { position: relative; z-index: 2; max-width: 640px; margin-left: 0; }
 .hero-title {
-  font-size: clamp(2.6rem, 9vw, 4.7rem);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -.3px;
+  font-size: clamp(2.4rem, 8.2vw, 4.3rem);
+  line-height: 1.07;
   margin: 6px 0 20px;
   text-shadow: 0 2px 30px rgba(0,0,0,.5);
 }
@@ -218,34 +223,58 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.12
    SERVICIOS
    ========================================================= */
 .services { background: linear-gradient(180deg, var(--black) 0%, var(--black-2) 100%); }
-.cards { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 .card {
-  background: var(--black-3);
+  position: relative;
   border: 1px solid var(--line-soft);
   border-radius: var(--radius);
-  padding: 34px 28px;
-  position: relative;
   overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--black-3);
   transition: transform .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
 }
+/* Foto de fondo que llena la card */
+.card-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform .6s var(--ease);
+}
+.card:hover .card-img { transform: scale(1.06); }
+/* Degradado oscuro para que el texto superpuesto se lea siempre */
+.card::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(8,8,8,.94) 0%,
+    rgba(8,8,8,.82) 22%,
+    rgba(8,8,8,.45) 44%,
+    rgba(8,8,8,.08) 66%,
+    rgba(8,8,8,0) 100%
+  );
+}
+/* Línea dorada superior (animada en hover) */
 .card::before {
-  content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+  content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 3px; z-index: 3;
   background: linear-gradient(90deg, var(--gold), transparent);
   transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease);
 }
 .card:hover { transform: translateY(-6px); border-color: var(--line); box-shadow: 0 24px 50px -30px rgba(0,0,0,.9); }
 .card:hover::before { transform: scaleX(1); }
-.card-ico {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 58px; height: 58px; border-radius: 12px;
-  background: rgba(214,167,87,.08);
-  border: 1px solid var(--line);
-  color: var(--gold);
-  margin-bottom: 20px;
+/* Texto superpuesto, anclado abajo */
+.card-body {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  padding: 26px 24px 24px;
 }
-.card-ico svg { width: 30px; height: 30px; }
-.card h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--white); }
-.card p { color: var(--gray); font-size: .96rem; }
+.card h3 {
+  font-size: 1.6rem; margin-bottom: 8px; color: var(--white);
+  text-shadow: 0 2px 12px rgba(0,0,0,.75);
+}
+.card p {
+  color: #e7e4dd; font-size: .95rem; line-height: 1.5;
+  text-shadow: 0 1px 10px rgba(0,0,0,.85);
+}
 
 /* =========================================================
    CONFIGURADOR DE COLOR
@@ -255,10 +284,15 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.12
   display: grid;
   grid-template-columns: 1fr;
   gap: 28px;
-  align-items: center;
+  align-items: start;
   max-width: 1000px;
   margin: 0 auto;
 }
+
+/* Texto del configurador (columna derecha en desktop, arriba de los colores) */
+.cfg-head { max-width: 640px; }
+.cfg-head h2 { font-size: clamp(2rem, 6vw, 3rem); }
+.cfg-head .section-sub { margin-top: 14px; }
 
 /* Escena (pared + sillón) */
 .cfg-scene {
@@ -283,7 +317,7 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.12
    La máscara recorta el resultado a la silueta del sillón. */
 .cfg-sofa {
   width: 100%;
-  max-width: 560px;
+  max-width: 640px;
   aspect-ratio: 4 / 3;
   background-image:
     linear-gradient(var(--sofa, #2C57A6), var(--sofa, #2C57A6)),
@@ -331,9 +365,20 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.12
 .cfg-note { font-size: .78rem; color: var(--gray-dim); }
 
 @media (min-width: 860px) {
-  .cfg-stage { grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: stretch; }
-  .cfg-scene { padding-top: 34px; }
-  .cfg-controls { justify-content: center; }
+  .cfg-stage {
+    grid-template-columns: 1.4fr .9fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "scene head"
+      "scene controls";
+    column-gap: 48px;
+    row-gap: 24px;
+    align-items: stretch;
+    max-width: 1120px;
+  }
+  .cfg-head    { grid-area: head; }
+  .cfg-scene   { grid-area: scene; padding-top: 34px; height: 100%; min-height: 460px; }
+  .cfg-controls { grid-area: controls; justify-content: flex-start; }
 }
 
 /* =========================================================
@@ -341,9 +386,22 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.12
    ========================================================= */
 .gallery-section { background: var(--black-2); }
 .gallery {
-  columns: 1;
-  column-gap: 16px;
+  columns: 2;
+  column-gap: 12px;
 }
+/* Estado colapsado: se muestran solo las 3 primeras fotos (lo activa el JS).
+   Sin JS, se ven todas igual. */
+.gallery.is-collapsed .gallery-item:nth-child(n+4) { display: none; }
+
+.gallery-more-wrap { text-align: center; margin-top: 28px; }
+.gallery-more[hidden] { display: none; }
+.gallery-more .chev {
+  display: inline-block; width: 8px; height: 8px; margin-left: 4px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform .25s var(--ease);
+}
+.gallery-more[aria-expanded="true"] .chev { transform: rotate(-135deg) translateY(-1px); }
 .gallery-item {
   position: relative;
   break-inside: avoid;
@@ -531,11 +589,21 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.12
 .reveal.in { opacity: 1; transform: none; }
 
 /* =========================================================
+   RESPONSIVE — CELULAR (cards más chicas)
+   ========================================================= */
+@media (max-width: 619px) {
+  .cards { gap: 12px; }
+  .card-body { padding: 14px 12px 12px; }
+  .card h3 { font-size: 1.05rem; margin-bottom: 4px; }
+  .card p { font-size: .76rem; line-height: 1.4; }
+}
+
+/* =========================================================
    RESPONSIVE — TABLET / DESKTOP
    ========================================================= */
 @media (min-width: 620px) {
-  .cards { grid-template-columns: repeat(2, 1fr); }
-  .gallery { columns: 2; }
+  .cards { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .gallery { columns: 3; }
 }
 @media (min-width: 980px) {
   .section { padding: 100px 0; }
